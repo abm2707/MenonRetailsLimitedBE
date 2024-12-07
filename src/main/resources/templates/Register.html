@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Menon Retail Ltd. - Register</title>
+    <link href="/css/RegisterStyles.css" rel="stylesheet">
+</head>
+<body>
+<div class="register-container">
+    <!-- Store Name at the Top -->
+    <h1 class="store-name">Menon Retails Ltd.</h1>
+
+    <!-- Registration Box -->
+    <div class="register-box">
+        <h2>Register</h2>
+        <form action="/client/register" id="registerForm" method="post">
+            <div class="input-container">
+                <input id="username" name="username" required type="text">
+                <label for="username">Username</label>
+            </div>
+            <div class="input-container">
+                <input id="email" name="email" required type="email">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-container">
+                <input id="password" name="password" required type="password">
+                <label for="password">Password</label>
+            </div>
+            <div class="input-container">
+                <input id="confirmPassword" name="confirmPassword" required type="password">
+                <label for="confirmPassword">Confirm Password</label>
+            </div>
+            <div class="register-btn-container">
+                <button class="register-btn" type="submit">Register</button>
+            </div>
+            <div class="login-link">
+                <a href="/client/login">Already have an account? Login</a>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="/scripts/Registerscripts.js"></script>
+</body>
+</html>

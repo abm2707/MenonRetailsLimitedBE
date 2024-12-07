@@ -1,0 +1,22 @@
+How spring security handles authentication ?
+
+1. Whenever a user tries to login, then that request is intercepted by a security filter of Spring Security
+called as 'UsernamePasswordAuthenticationFilter'.
+This filter generates a token and gives it to AuthenticationManager. The Authentication manager asks
+the Authentication provider to verify the Credentials.
+
+2. Now, the token has all the credentials which is entered by the User as input.
+The authentication provider calls the Custom user details service. This service has loadUserByUserName method.
+
+3. The username which was entered by the user is passed on to the 'loaduserByUserName' and the details of the
+user is fetched from the DB.
+
+4. The credentials entered in the login form and the  data fetched from the DB is checked using the Authentication Provider.
+
+5. If authentication succeeds then user is allowed to proceed to the endpoint which is specified at the FilterChain method. Else the
+authorization attempt is denied.
+
+///////////////////////////////  JWT Token   /////////////////////////////////
+
+1. JWT token consists of 3 parts. - Header (Signing Algo,Type of Token), payload & signature.
+Signature consist of Secret key and validity.
