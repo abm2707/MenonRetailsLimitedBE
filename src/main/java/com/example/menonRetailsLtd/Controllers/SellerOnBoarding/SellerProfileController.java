@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/register")
 public class SellerProfileController {
-
+//Push to github
     String errResp;
 
     @Autowired
