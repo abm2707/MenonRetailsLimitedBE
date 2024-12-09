@@ -1,12 +1,11 @@
 package com.example.menonRetailsLtd.Models.SellerOnboarding.SellerRegistration;
 
 import jakarta.persistence.*;
-import jdk.jfr.Name;
 import lombok.Data;
 
 @Entity
 @Data
-public class SellerRegistration {
+public class Sellerprofile {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "sellerId")

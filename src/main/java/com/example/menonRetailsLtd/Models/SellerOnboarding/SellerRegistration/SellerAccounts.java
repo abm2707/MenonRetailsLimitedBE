@@ -1,6 +1,8 @@
 package com.example.menonRetailsLtd.Models.SellerOnboarding.SellerRegistration;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 
@@ -9,6 +11,7 @@ import lombok.Data;
 public class SellerAccounts {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long sellerid;
 
     private String bankAccountName;
