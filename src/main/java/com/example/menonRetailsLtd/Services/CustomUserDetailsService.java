@@ -18,10 +18,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
     UserRepository userRepository;
-
-    @Autowired
-    Utilities utilities;
-
+    Utilities utilities = new Utilities();
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         userMaster user = userRepository.findByaccessId(username);

@@ -73,7 +73,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/Client/**", "/client/register", "/client/test",
                                 "/screenAccess/screens/**", "/auth/login", "/auth/login/authLogin",
-                                "/addPrdToCart/add", "/login").permitAll() // Permit login, register, and test pages
+                                "/addPrdToCart/add", "/login", "/get/**").permitAll() // Permit login, register, and test pages
                         .requestMatchers("/css/**", "/js/**", "/images/**", "/static/**").permitAll() // Permit static resources
                         .anyRequest().authenticated() // All other requests require authentication
                 )
